@@ -1,10 +1,10 @@
 # 🌐 Celebal Technologies - Node.js Internship 2025
 
-Welcome to my repository for the **Summer Internship** at **Celebal Technologies**, focused on **Node.js Development**.
+Welcome to my repository for the **Internship** at **Celebal Technologies**, focused on **Node.js Development**.
 
 🗓️ **Internship Duration:** 19 May 2025 – 20 July 2025  
 🏢 **Mode:** Remote  
-💼 **Type:** Unpaid Internship  
+💼 **Type:** Internship  
 📚 **Focus:** Practical Learning • Industry Projects • Skill Development
 
 ---
@@ -31,6 +31,3 @@ Welcome to my repository for the **Summer Internship** at **Celebal Technologies
 This internship is an opportunity to gain hands-on experience in backend development using **Node.js**, and to work on industry-oriented projects under guidance. It’s designed to improve my coding, project structuring, and team collaboration skills.
 
 ---
-
-## 📇 Folder Structure (Sample)
-
