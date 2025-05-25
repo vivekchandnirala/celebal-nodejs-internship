@@ -7,3 +7,4 @@ P = Print
 L = Loop
 
 npm install: isse node_module aati hai (matlab sare dependency download ho jati hai)
+.gitignore file meh (/node_module) ko save kar dete hai taki wo git pe push nah ho paye
