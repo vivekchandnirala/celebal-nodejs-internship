@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 Node REPL (Command Line meh jab run kar rahe hote hai)
+=======
+// Task and Learning of 1st Week
+Node REPL
+
+>>>>>>> 5dfc49b7deac428862f390b382a306b2df220bd0
 R = Read
 E = Evalute 
 P = Print
 L = Loop
 
 npm install: isse node_module aati hai (matlab sare dependency download ho jati hai)
+<<<<<<< HEAD
 
 "package.json" file meh Script wale meh hum apna code likh sakte hai, (matlab ki agar hume 2 file run karni pad rahi hai tho hum usko ek hi command se run kar sakte hai)
 
 Module: hume alag alag file pe kaam karte hai, aur last meh hum sab ko export karege aur usko index.js file meh import karege taki jitna bhi kaam kiya hai wo sab alag alag(independent) hote hue bhi ek jagha pe aaye aur phir run ho
 Jo yaad rakhne ki baat hai: exports (module.exports), import (const a=require("./path") ) phir a ko call kar sakte hai
+=======
+.gitignore file meh (/node_module) ko save kar dete hai taki wo git pe push nah ho paye
+>>>>>>> 5dfc49b7deac428862f390b382a306b2df220bd0
