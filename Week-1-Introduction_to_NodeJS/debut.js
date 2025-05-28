@@ -1,4 +1,5 @@
-function today(){
-return new Date();}
-today()
-Math.sqrt(4);
+function add(a,b){
+    return a+b;
+}
+
+console.log(add(5,3));

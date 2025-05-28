@@ -1,8 +1,12 @@
-Node REPL
-
+Node REPL (Command Line meh jab run kar rahe hote hai)
 R = Read
 E = Evalute 
 P = Print
 L = Loop
 
 npm install: isse node_module aati hai (matlab sare dependency download ho jati hai)
+
+"package.json" file meh Script wale meh hum apna code likh sakte hai, (matlab ki agar hume 2 file run karni pad rahi hai tho hum usko ek hi command se run kar sakte hai)
+
+Module: hume alag alag file pe kaam karte hai, aur last meh hum sab ko export karege aur usko index.js file meh import karege taki jitna bhi kaam kiya hai wo sab alag alag(independent) hote hue bhi ek jagha pe aaye aur phir run ho
+Jo yaad rakhne ki baat hai: exports (module.exports), import (const a=require("./path") ) phir a ko call kar sakte hai
