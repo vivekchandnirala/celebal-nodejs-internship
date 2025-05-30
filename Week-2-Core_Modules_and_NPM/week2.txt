@@ -1,0 +1,22 @@
+Synchronous (Blocking Operations):Response dene meh time lagata hai(Threads/ Workers kaam kar ke dete hai) Variable Return kar sakta hai
+Asynchronous (NON-Blocking Operations): Response Jaldi dega ,Variable Return Nahi karta hai
+
+Node Module ke andar "File System" module inbuild hote hai
+
+File Create: fs.writeFile("./excuting.txt", "File Created with data");      -->   (fileName, Data)   //Async
+             fs.writeFileSync("./excuting.txt", "File Created with data");  -->   (fileName, Data)   //Sync
+
+
+
+File Read:   fs.readFileSync("./contact.txt", "utf-8")    -->  (fileName, Encoded)    //Sync
+             fs.readFile("./contact.txt", "utf-8", (err,result)=>{
+                        if(err){
+                            console.log(err);
+                        }else{
+                            console.log(result);
+                        }
+                    });                                                                //Async
+
+
+
+File Append:    fs.appendFile("./textFile.txt", "Hello");    --> (fileName, Adding Data)
