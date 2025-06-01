@@ -1,3 +1,6 @@
+
+
+
 Synchronous (Blocking Operations):Response dene meh time lagata hai(Threads/ Workers kaam kar ke dete hai) Variable Return kar sakta hai
 Asynchronous (NON-Blocking Operations): Response Jaldi dega ,Variable Return Nahi karta hai
 
