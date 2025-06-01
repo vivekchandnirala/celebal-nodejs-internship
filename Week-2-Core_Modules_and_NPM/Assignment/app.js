@@ -52,9 +52,9 @@ const server = http.createServer((req, res) => {
     res.end(`
       <h2>Node File Management Tool using core modules</h2>
       <ul>
-        <li><a href="/create">Create File</a></li>
-        <li><a href="/read">Read File</a></li>
-        <li><a href="/delete">Delete File</a></li>
+        <li><a href="/create"><button>Create File</button></a></li>
+        <li><a href="/read"><button>Read File</button></a></li>
+        <li><a href="/delete"><button>Delete File</button></a></li>
       </ul>
     `);
   }
