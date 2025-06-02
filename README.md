@@ -14,7 +14,7 @@ Welcome to my repository for the **Internship** at **Celebal Technologies**, foc
 | Week | Topics / Tasks | Status |
 |------|----------------|--------|
 | Week 1 | ✅ [Assignment Title or Description](Week-1-Introduction_to_NodeJS\Assignment\app.js) | ✅ Completed |
-| Week 2 | ⏳ To be updated | ⬜ In Progress |
+| Week 2 | ✅ [Assignment Title or Description](./Week-2-Core_Modules_and_NPM/Assignment/app.js) | ✅ Completed |
 | Week 3 | ⏳ To be updated | ⬜ In Progress |
 | Week 4 | ⏳ To be updated | ⬜ In Progress |
 | Week 5 | ⏳ To be updated | ⬜ In Progress |
