@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 5 CRUD App</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: linear-gradient(120deg, #84fab0, #8fd3f4); color: #333; text-align: center; }
+    input, button { padding: 8px; margin: 4px; border-radius: 5px; border: 1px solid #ccc; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 8px 0; background: #fff; padding: 8px; border-radius: 4px; box-shadow: 0 0 3px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <h1>CRUD Application</h1>
+  <input type="text" id="itemInput" placeholder="Enter item name" />
+  <button onclick="addItem()">Add Item</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    const API_URL = 'http://localhost:5000/items';
+
+    async function fetchItems() {
+      const res = await fetch(API_URL);
+      const items = await res.json();
+      const list = document.getElementById('itemList');
+      list.innerHTML = '';
+      items.forEach(item => {
+        list.innerHTML += `
+          <li>
+            ${item.name}
+            <button onclick="deleteItem('${item._id}')">❌</button>
+            <button onclick="updateItem('${item._id}')">✏️</button>
+          </li>`;
+      });
+    }
+
+    async function addItem() {
+      const name = document.getElementById('itemInput').value;
+      if (!name) return alert('Enter item name');
+      await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name }) });
+      document.getElementById('itemInput').value = '';
+      fetchItems();
+    }
+
+    async function deleteItem(id) {
+      await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+      fetchItems();
+    }
+
+    async function updateItem(id) {
+      const newName = prompt('Enter new name:');
+      if (newName) {
+        await fetch(`${API_URL}/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: newName }) });
+        fetchItems();
+      }
+    }
+
+    fetchItems();
+  </script>
+</body>
+</html>
