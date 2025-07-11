@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 6 - RESTful API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-400 to-cyan-300 min-h-screen p-6 text-center text-white font-sans">
+  <h1 class="text-4xl mb-4 font-bold">RESTful Users App</h1>
+
+  <div class="mb-4">
+    <input id="name" placeholder="Name" class="p-2 rounded text-black" />
+    <input id="email" placeholder="Email" class="p-2 rounded text-black" />
+    <input id="role" placeholder="Role" class="p-2 rounded text-black" />
+    <button onclick="addUser()" class="bg-green-600 px-4 py-2 rounded ml-2">Add</button>
+  </div>
+
+  <div id="userList" class="grid gap-3"></div>
+
+  <script>
+    const api = 'http://localhost:5000/users';
+
+    async function loadUsers() {
+      const res = await fetch(api);
+      const users = await res.json();
+      document.getElementById('userList').innerHTML = users.map(user => `
+        <div class="bg-white text-black p-3 rounded shadow">
+          <strong>${user.name}</strong> | ${user.email} | ${user.role}
+          <button onclick="editUser('${user._id}')" class="bg-yellow-400 px-2 ml-2">Edit</button>
+          <button onclick="deleteUser('${user._id}')" class="bg-red-500 px-2 ml-2">Delete</button>
+        </div>
+      `).join('');
+    }
+
+    async function addUser() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const role = document.getElementById('role').value.trim();
+
+  if (!name || !email || !role) {
+    alert("All fields are required");
+    return;
+  }
+
+  const res = await fetch(api, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, role })
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    alert(`Error: ${data.error}`);
+    return;
+  }
+
+  // Clear inputs
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('role').value = '';
+
+  loadUsers();
+}
+
+
+    async function deleteUser(id) {
+      await fetch(`${api}/${id}`, { method: 'DELETE' });
+      loadUsers();
+    }
+
+    async function editUser(id) {
+      const name = prompt('Enter new name');
+      const email = prompt('Enter new email');
+      const role = prompt('Enter new role');
+      await fetch(`${api}/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, role })
+      });
+      loadUsers();
+    }
+
+    loadUsers();
+  </script>
+</body>
+</html>
