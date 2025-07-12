@@ -18,7 +18,7 @@ Welcome to my repository for the **Internship** at **Celebal Technologies**, foc
 | ✅ Week 3 | [Async/Await & Promises](./Week-3-Asynchronous_Programming_in_Node.js/Assignment/app.js) | Completed |
 | ✅ Week 4 | [Basic Web Server with Express](./Week-4-Introduction_to_Express.js/Assignment/app.js) | Completed |
 | ✅ Week 5 | [MongoDB CRUD App + UI](./Week-5-Working_with_Databases/Assignment/server/app.js) | Completed |
-| ✅ Week 6 | [RESTful API (Users)](./Week-6-RESTful_API_Development/server/app.js) | Completed |
+| ✅ Week 6 | [RESTful API (Users)](./Week-6-RESTful_API_Development/Assignment/server/app.js) | Completed |
 | ✅ Week 7 | [JWT Authentication + Secure Routes](./Week-7-Authentication_and_Node.js_Security/Assignment/server/app.js) | Completed |
 | ✅ Week 8 | [Advanced Features: File Upload, Error Handling, Indian Army API Integration](./Week-8-Advanced_Express.js_Features/Assignment/server/app.js) | Completed |
 
