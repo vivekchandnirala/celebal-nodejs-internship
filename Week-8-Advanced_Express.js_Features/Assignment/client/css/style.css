@@ -1,0 +1,79 @@
+/* client/css/style.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5 ;
+  background-size: cover;
+  color: #212121;
+}
+
+header {
+  background-color: #3b5323;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="file"] {
+  padding: 8px;
+  border: 2px solid #3b5323;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #3b5323;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #4b652c;
+}
+
+#status {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+
+
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a.active {
+  text-decoration: underline;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="./css/gallery.css">
+</head>
+<body>
+  <header>
+    <h1>Gallery</h1>
+    <nav>
+      <a href="/">Upload</a>
+      <a href="/view.html" class="active">View Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Uploaded Media</h2>
+      <div id="images" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Add New Operation</h2>
+      <input id="opName" placeholder="Mission Name" />
+      <input id="opDesc" placeholder="Mission Description" />
+      <button onclick="addMission()">Add Mission</button>
+    </section>
+
+    <section>
+      <h2> Current Operations</h2>
+      <div id="ops" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="./js/gallery.js"></script>
+</body>
+</html>

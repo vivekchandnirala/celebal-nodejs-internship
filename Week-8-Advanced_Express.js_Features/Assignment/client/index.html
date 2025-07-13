@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Upload</h1>
+    <nav>
+      <a href="/" class="active">Upload</a>
+      <a href="/view.html">View Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="uploadForm">
+      <label for="file">Select File:</label>
+      <input type="file" id="file" required />
+      <button type="submit">Upload</button>
+    </form>
+    <div id="status"></div>
+  </main>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fileInput = document.getElementById('file');
+      const formData = new FormData();
+      formData.append('file', fileInput.files[0]);
+
+      try {
+        const res = await fetch('/api/upload', { method: 'POST', body: formData });
+        const data = await res.json();
+        status.innerText = data.message;
+        status.style.color = 'green';
+      } catch {
+        status.innerText = 'Upload failed.';
+        status.style.color = 'red';
+      }
+    });
+  </script>
+</body>
+</html>
